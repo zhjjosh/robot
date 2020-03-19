@@ -93,12 +93,7 @@ class Robot
 
     public function validatePositionVal($val, $limit)
     {
-        if (is_numeric($val)) {
-            $val = (int) $val;
-        } else {
-            return false;
-        }
-        return is_int($val) && $val >= 0 && $val < $limit;
+        return (is_int($val) || ctype_digit($val)) && $val >= 0 && $val < $limit;
     }
 
     public function validateFaceVal($val, $enum)

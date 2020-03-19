@@ -22,7 +22,7 @@ final class PositionValTest extends TestCase
     public function testCanRejectInvalidPositionValue()
     {
         $positionVals = [
-            '-1', Constant::MAX_X, Constant::MAX_X + 1
+            '-1', Constant::MAX_X, Constant::MAX_X + 1, '1.1'
         ];
         $robot = new Robot();
         foreach ($positionVals as $val){
